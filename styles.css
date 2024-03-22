@@ -23,6 +23,11 @@ body {
     src: url(fonts/Crosterian.ttf);
 }
 
+@font-face {
+    font-family: montserrat;
+    src: url(fonts/MontserratAlternates/MontserratAlternates-Regular.otf)
+}
+
 :root {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -30,6 +35,8 @@ body {
 
 body {
     background-color: rgb(227, 199, 227);
+    
+    font-family: montserrat, 'Courier New', Courier, monospace;
 }
 
 main {
@@ -93,55 +100,95 @@ main {
 .right-side-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;    
-
-    padding: 2rem 5rem;
 }
 
 .right-side-container > h1 {
     font-size: 2.5rem;
     text-align: justify;
-    font-family: 'Courier New', Courier, monospace;
+
+    line-height: 1.5;
+
+    padding: 0 15rem;
 }
 
 .form-main > h2 {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    align-self: center;     /* Centers itself */
     gap: 3rem;
-
-    width: 600px;
 }
 
 .form-main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    
+    /* background: linear-gradient(
+        135deg,
+        rgb(227, 199, 227),
+        rgb(232, 189, 238), 70%, 
+        rgb(234, 150, 240)
+      ); */
 
-    padding: 2rem 3rem;
+    background-color: rgba(233, 203, 233, 0.665);
 
-    background-color: white;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .25);
 
-    border-radius: 6px;
+    padding: 2rem 15rem;
 }
 
 .form-main-row {
     display: flex;
-    justify-content: space-around;
+    gap: 10rem;
 }
 
 .form-main-row div {
+    flex: 1 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 0.7rem;
 }
 
-form > .btn-create-account {
+form .btn-create-account {
     align-self: flex-start;
-    padding: 0.5rem 2rem;
+    padding: 1rem 3rem;
+
+    margin-top: 1.5rem;
+
+    font-family: inherit;
+    font-size: 1.8rem;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: rgb(253, 146, 250);
+
+    cursor: pointer;
+}
+
+form input {
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding: 1rem;
+}
+
+form input:focus {
+    outline: 1px solid blue;
+    box-shadow: inset 0 0 5px 1px lightblue;
+}
+
+form label {
+    font-size: 1.05rem;
+
+    color: black;
+}
+
+input[type="password"]:invalid {
+    outline: 1px solid rgb(243, 121, 121);
+    background-color: rgb(252, 192, 192);
+    box-shadow: none;
 }
