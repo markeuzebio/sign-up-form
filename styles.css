@@ -29,7 +29,7 @@ body {
 }
 
 body {
-    background-color: rgb(205, 202, 202);
+    background-color: rgb(227, 199, 227);
 }
 
 main {
@@ -57,7 +57,7 @@ main {
     width: 100%;
 
     text-align: center;
-    font-family: pixelar;
+    font-family: pixelar, sans-serif;
     font-size: 4rem;
     color: floralwhite;
 
@@ -79,4 +79,69 @@ main {
 
 .image-credit > a {
     color: inherit;
+}
+
+/* -------------------------------------------------- */
+
+
+/* ------------- RIGHT SIDE PAGE STYLING ------------- */
+
+.italize {
+    font-style: italic;
+}
+
+.right-side-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+
+    padding: 2rem 5rem;
+}
+
+.right-side-container > h1 {
+    font-size: 2.5rem;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-main > h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;     /* Centers itself */
+    gap: 3rem;
+
+    width: 600px;
+}
+
+.form-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    padding: 2rem 3rem;
+
+    background-color: white;
+
+    border-radius: 6px;
+}
+
+.form-main-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-main-row div {
+    display: flex;
+    flex-direction: column;
+}
+
+form > .btn-create-account {
+    align-self: flex-start;
+    padding: 0.5rem 2rem;
 }
