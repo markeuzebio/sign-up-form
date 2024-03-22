@@ -16,7 +16,12 @@ body {
 	line-height: 1;
 }
 
-/* Custom styling */
+/* -------------------------------------------------- */
+
+@font-face {
+    font-family: pixelar;
+    src: url(fonts/Crosterian.ttf);
+}
 
 :root {
     box-sizing: border-box;
@@ -25,4 +30,53 @@ body {
 
 body {
     background-color: rgb(205, 202, 202);
+}
+
+main {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+/* ------------- LEFT SIDE PAGE STYLING ------------- */
+
+.left-side-container {
+    display: flex;
+    position: relative;
+}
+
+.left-side-container > .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    position: absolute;
+    top: 30%;
+
+    width: 100%;
+
+    text-align: center;
+    font-family: pixelar;
+    font-size: 4rem;
+    color: floralwhite;
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.left-side-container > .image-credit {
+    position: absolute;
+    bottom: 1%;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.left-side-container .image-credit {
+    color: rgb(179, 179, 179);
+}
+
+.image-credit > a {
+    color: inherit;
 }
